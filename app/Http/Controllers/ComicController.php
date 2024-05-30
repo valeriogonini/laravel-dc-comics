@@ -28,7 +28,7 @@ class ComicController extends Controller
 
         $new_comic = Comic::create($form_data);
 
-        return to_route('comics.show', $new_comic);
+        return to_route('comics.index', $new_comic);
     }
     public function edit(Comic $comic)
     {
@@ -42,6 +42,12 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return to_route('comics.show', $comic);
+        return to_route('comics.index', $comic);
+    }
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+
+        return to_route('comics.index');
     }
 }

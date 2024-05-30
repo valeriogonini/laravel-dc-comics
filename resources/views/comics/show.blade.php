@@ -15,6 +15,13 @@
             <p class="card-text">{{$comic->series}}</p>
             <p class="card-text">{{$comic->sale_date}}</p>
             <p class="card-text">{{$comic->type}}</p>
+            <a href="{{route('comics.edit', $comic)}}">Edit</a>
+            <form action="{{route('comics.destroy', $comic)}}" method="POST">
+              @method('DELETE')
+
+              @csrf
+              <button class="btn">DELETE</button>
+            </form>
 
 
           </div>
