@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button href="{{route('comics.index')}}" class="btn btn-primary" type="button">Vai alla pagina comics</button>
+            <a href="{{route('comics.index')}}" class="btn btn-primary" type="button">Vai alla pagina comics</a>
             
           </div>
     </body>
